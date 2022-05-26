@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <div>
+            <p>
+            <label>Select your menu</label>
+            </p>
+            <p>
+            <label>Select all</label>
+            <input type="checkbox" id="all" onclick="selectAll()">
+            </p>
+            <p>
+                <label>Apple</label>
+                <input type="checkbox" id="apple" >
+            </p>
+            <p>
+                <label>Orange</label>
+                <input type="checkbox" id="orange">
+            </p>
+            <p>
+                <label>Banana</label>
+                <input type="checkbox" id="banana">
+            </p>
+
+
+        </div>
+    </main>
+    <script>
+        function selectAll(){
+            if(document.getElementById("all").checked === true){
+                document.getElementById("apple").checked = true;
+                document.getElementById("orange").checked = true;
+                document.getElementById("banana").checked = true;
+
+            }
+            else if(document.getElementById("all").checked === false){
+                document.getElementById("apple").checked = false;
+                document.getElementById("orange").checked = false;
+                document.getElementById("banana").checked = false;
+
+            }
+            
+
+        
+
+        }
+
+    </script>
+    
+</body>
+</html>

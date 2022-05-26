@@ -1,0 +1,75 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <div>
+            <label for="pass">Enter password
+            </label>
+            <input type="password" onchange="return isValidPassword()" id="password">
+            <p>
+                <small id="passError0"></small>
+                </p>
+            <p>
+            <small id="passError1"></small>
+            </p>
+            <p>
+                <small id="passError2"></small>
+            </p>
+            <p>
+                <small id="passError3"></small>
+            </p>
+            </div>
+            <div>
+    </form>
+
+    <script>
+        function containsNumber(str) {
+            return /\d/.test(str);
+        }
+        function isValidPassword(){
+            password=document.getElementById("password");
+            if(password.value ==""){
+                document.getElementById("passError0").innerHTML="Password field cannot be empty"
+
+            }
+            else{
+                document.getElementById("passError0").innerHTML="";
+
+            }
+            if(password.value.length<8){
+                document.getElementById("passError1").innerHTML="Password length should be greater than 8"
+
+            }
+            else{
+                document.getElementById("passError1").innerHTML="";
+
+            }
+            if(password.value.length>30){
+                document.getElementById("passError2").innerHTML="Password length should be less than 30"
+
+            }
+            else{
+                document.getElementById("passError2").innerHTML="";
+
+            }
+            if( !containsNumber(password.value)){
+                document.getElementById("passError3").innerHTML="Password should contain atleast 1 character";
+
+
+            }
+            else{
+                document.getElementById("passError3").innerHTML="";
+
+            }
+
+
+        }
+    </script>
+    
+</body>
+</html>
